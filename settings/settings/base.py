@@ -108,7 +108,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.abspath(os.path.join(os.path.join(BASE_DIR,os.pardir), 'media'))
 STATIC_URL = '/static/'
 
-if DEBUG == "Stagging":
+if str(config('STATIC')) == "Stagging":
     STATIC_ROOT = os.path.abspath(os.path.join(os.path.join(BASE_DIR,os.pardir), 'staticfiles'))
 else:
     STATICFILES_DIRS = (
