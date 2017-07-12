@@ -1,0 +1,330 @@
+{% extends 'frontend/base.html' %} {% load staticfiles %} 
+{% block styles %} 
+<style>
+
+</style>
+{% endblock %} 
+{% block fullscreen %}
+    <div class="hide-on-small-only">
+        <div class="carousel carousel-slider center carousel-full" data-indicators="true">
+            <div class="carousel-item">
+                <img src="{% static 'frontend/banners/Banner01.png' %}">
+            </div>
+
+            <div class="carousel-next">
+                <a class="btn-floating btn-large waves-effect waves-light white">
+                    <i class="material-icons black-text">navigate_next</i>
+                </a>
+            </div>
+            <div class="carousel-before">
+                <a class="btn-floating btn-large waves-effect waves-light white">
+                    <i class="material-icons black-text">navigate_before</i>
+                </a>
+            </div>
+            <div class="scroll">
+                <a href="#nav">
+                    <span id="scroll">
+                        <svg version="1.1" id="icn" fill="#006064" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="50px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                            <polygon opacity="0" points="19.9,21 0,1.3 1.4,0 19.9,18.3 38.6,0 40,1.3 ">
+                                <animate id="first" attributeName="opacity" attributeType="XML" dur="1s" from="1" to="0" repeatCount="indefinite" begin="0"></animate>
+                            </polygon>
+                            <polygon id="arrow-two" opacity="0" points="19.9,30.9 0,11.2 1.4,9.9 19.9,28.2 38.6,9.8 40,11.2 ">
+                                <animate id="second" attributeName="opacity" attributeType="XML" dur="1s" from="1" to="0" repeatCount="indefinite" begin="1s"></animate>
+                            </polygon>
+                            <polygon id="arrow-three" opacity="0" points="19.9,40 0,20.3 1.4,19 19.9,37.3 38.6,19 40,20.3 ">
+                                <animate id="third" attributeName="opacity" attributeType="XML" dur="1s" from="1" to="0" repeatCount="indefinite" begin="2s"></animate>
+                            </polygon>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %} 
+{% block section %}
+    <div class="row no-margin no-padding"></div>
+    <div class="row valign-wrapper div-mid">
+        <div class="container">
+            {% if lang == 'es' %}
+            <h4 class="heading-h2 teal-text text-darken-1 center-align">
+                SOLUCIONES AVANZADAS EN WEB. APLICACIONES Y PORTALES DE EMPRESA.
+            </h4>
+            <p class="heading-h4 teal-text text-darken-4 center-align">
+                Servicio de ciclo completo, que cubre todos los aspectos desde la producción a la implementación.
+            </p>
+            {% else %}
+            <h4 class="heading-h2 teal-text text-darken-1 center-align">
+                ADVANCED WEB & MOBILE SOLUTIONS. ENTERPRISE APPS & PORTALS.
+            </h4>
+            <p class="heading-h4 teal-text text-darken-4 center-align">
+                Full-cycle servicing that covers every aspect of app production and implementation.
+            </p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        {% if lang == 'es' %}
+                <div class="container">
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Desarrollo de Aplicaciones</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Mantenimiento y Soporte</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Correo Eléctronico Corporativo</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Diseño de Interfaces y Prototipos</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Marketing Digital</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Web y Portales Empresariales</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="container">
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Application Development</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Maintenance and Support</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Corporate Email and Mailing</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">UX DESIGN AND PROTOTYPING</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Social Networking Solutions</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white div-mid-card black-text valign-wrapper homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <a href="" class="black-text center-align">
+                            <h5 class="heading-h3">Web and Enterprise Portals</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div class="row valign-wrapper div-mid">
+        <div class="container">
+            {% if lang == 'es' %}
+            <h4 class="heading-h2 black-text center-align">
+                <span class="teal-text text-darken-1" id="typed"></span> Locales y Globales
+            </h4>
+            <p class="heading-h4 teal-text text-darken-4 center-align">
+                Conocemos las normas corporativas, que coinciden con los estándares de calidad de alta tecnología.
+            </p>
+            {% else %}
+            <h4 class="heading-h2 black-text center-align">
+                Local & Global <span class="teal-text text-darken-1" id="typed"></span>
+            </h4>
+            <p class="heading-h4 teal-text text-darken-4 center-align">
+                We know corporate rules, we match high tech’s quality standards.
+            </p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="cyan darken-4">
+        <div class="row padding-5">
+            <div class="col s12 m4">
+                <div class="card white black-text homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="center-align heading-h3">Python</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white black-text homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="center-align heading-h3">PHP</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white black-text homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="center-align heading-h3">Frontend</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white black-text homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="center-align heading-h3">Backend</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white black-text homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="center-align heading-h3">Cloud</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card white black-text homeCard">
+                    <div class="card-image">
+                        <img src="{% static 'frontend/banners/Banner01.png' %}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <h5 class="center-align heading-h3">SSL</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row div-full valign-wrapper">
+        <div class="container">
+            <div class="">
+                {% include 'frontend/widgets/quick-contact.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock %} {% block js %}
+    <script type="text/javascript" src="{% static 'frontend/js/typed.min.js' %}"></script>
+    {% if lang == 'es' %}
+    <script>
+        var slogan = ["Clientes ", "Projectos "]
+    </script>
+    {% else %}
+    <script>
+        var slogan = ["Customers.", "Projects."]
+    </script>
+    {% endif %}
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider();
+            $('.carousel.carousel-slider').carousel({ fullWidth: true });
+        });
+        var typed = new Typed('#typed', {
+            strings: slogan,
+            loop:true,
+            typeSpeed: 100
+        });
+    </script>
+{% endblock %}

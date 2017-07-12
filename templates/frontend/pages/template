@@ -1,0 +1,11 @@
+{% extends 'frontend/base.html' %}{% load staticfiles %} 
+
+
+{% block styles %}
+{% endblock %}
+
+{% block section %}
+{% endblock %}
+
+{% block js %}
+{% endblock %}

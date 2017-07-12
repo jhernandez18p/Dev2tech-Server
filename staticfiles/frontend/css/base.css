@@ -1,0 +1,51 @@
+body{ border: 25px solid #FFF; }
+body::-webkit-scrollbar { width: .51em; }
+body::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.3); }
+body::-webkit-scrollbar-thumb { background-color:#444;outline: 1px solid slategrey; }
+.no-margin{margin: 0 !important}
+.no-padding{padding: 0 !important}
+.dev2tech-logo{ font-family: 'Sarina', cursive; }
+#staggered-test li{ opacity: 0; }
+.side-nav li > a {
+    color: rgba(0,0,0,0.87);
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 32px;
+}
+.carousel-full{ height: 97vh !important; }
+.carousel-full .carousel-item img { width: 100vw !important; height: 100vh !important; }
+.carousel-full .carousel-next,
+.carousel-full .carousel-before{ position: absolute; top:47%; z-index: 3;}
+.carousel-full .carousel-before{ left: -0.95%; }
+.carousel-full .carousel-next{ right:-0.95%; }
+.carousel-full .indicators .indicator-item { margin: 55px 4px !important }
+.carousel-full .scroll{ position: absolute; bottom: 0%; left: 45%; right: 45%; z-index: 3; }
+#langdropdowncontainer #langdropdown{ margin-top: 65px !important; min-width: 85px !important; }
+#langdropdowncontainer #langdropdown li a{ color: #006064 !important; }
+.div-full{height: 100vh}
+.div-mid{height: 50vh}
+.div-mid-card{height: 300px}
+.homeCard .card-content{background-color: rgba(0, 0, 0, 0); z-index: 3}
+.homeCard .card-image{ width: 100% !important; height: 100% !important; position: absolute; }
+.homeCard .card-image img{ width: 100% !important; height: 100% !important;transition: .1s ease; opacity: .083;}
+.homeCard .card-image img:hover{ opacity: 0.3; }
+.heading-h1{ font-size: 4.0em; }
+.heading-h2{ font-size: 3.0em; }
+.heading-h3{ font-size: 2.0em; }
+.heading-h4{ font-size: 1.5em; }
+footer .collection{ margin: 0 !important; border: none !important; }
+footer .collection .collection-item{ padding:10px 0 !important; border: none !important; }
+.padding-5{padding: 5% 0}
+@media (max-width: 800px) {
+    .heading-h1{ font-size: 3.5em; }
+    .heading-h2{ font-size: 2.5em; }
+    .heading-h3{ font-size: 1.5em; }
+    .heading-h4{ font-size: .85em; }
+    .div-mid-card{height: 200px}
+}
+@media (max-width: 800px) {
+
+}

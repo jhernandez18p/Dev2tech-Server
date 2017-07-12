@@ -1,0 +1,107 @@
+{% load staticfiles %}
+{% if lang == 'es' %}
+{% else %}
+{% endif %}
+<nav id="nav" class="scrollspy">
+    <div class="nav-wrapper cyan darken-4">
+        <div class="container">
+            {% if lang == 'es' %}
+                <a href="/es/" class="brand-logo dev2tech-logo">Dev2tech</a>
+            {% else %}
+                <a href="/en/" class="brand-logo dev2tech-logo">Dev2tech</a>
+            {% endif %}
+            <ul class="right">
+                <!-- Menu Trigger -->
+                <li><a class="hide-on-small-only" onclick="Materialize.showStaggeredList('#staggered-test')"><i class="material-icons right">menu</i></a></li>
+                <!-- SideNav -->
+                <li><a data-activates="slide-out" id="side-nav-btn" class="hide-on-med-and-up"><i class="material-icons right">menu</i></a></li>
+                <li class="hide-on-small-only" id="langdropdowncontainer">
+                    <form action="{% url 'lang' %}">
+                        <a class="lang-dropdown-button" data-activates="langdropdown" type="submit">
+                            {% if lang == 'es' %}
+                                es
+                                <input type="text" class="hide" value="en:{{url}}" name="url">
+                            {% else %}
+                                en
+                                <input type="text" class="hide" value="es:{{url}}" name="url">
+                            {% endif %}
+                            <i class="material-icons right">
+                            arrow_drop_down
+                            </i>
+                        </a>
+                    </form>
+                </li>
+            </ul>
+            <ul class="right" id="staggered-test">
+                {% if lang == 'es' %}
+                    <li><a href="{% url 'es:servicios' %}">Servicios</a></li>
+                    <li><a href="{% url 'es:trabajos' %}">Trabajos</a></li>
+                    <li><a href="{% url 'es:contacto' %}">Contacto</a></li>
+                {% else %}
+                    <li><a href="{% url 'en:services' %}">Services</a></li>
+                    <li><a href="{% url 'en:works' %}">Work</a></li>
+                    <li><a href="{% url 'en:contact' %}">Contact</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+<ul id="langdropdown" class="dropdown-content">
+    {% if lang == 'es' %}
+        <li><a href="/en/{{url}}">en</a></li>
+    {% else %}
+        <li><a href="/es/{{url}}">es</a></li>
+    {% endif %}
+</ul>
+<ul id="slide-out" class="side-nav hide-on-med-and-up">
+    <li>
+        <h4 class="center-align"><a href="/es/" class="brand-logo dev2tech-logo cyan-text text-darken-4">Dev2tech</a></h4>
+    </li>
+    <li>
+        <div class="divider"></div>
+    </li>
+    {% if lang == 'es' %}
+        <li><a href="{% url 'es:servicios' %}">Servicios</a></li>
+        <li><a href="{% url 'es:trabajos' %}">Trabajos</a></li>
+        <li><a href="{% url 'es:contacto' %}">Contacto</a></li>
+    {% else %}
+        <li><a href="{% url 'en:services' %}">Services</a></li>
+        <li><a href="{% url 'en:works' %}">Work</a></li>
+        <li><a href="{% url 'en:contact' %}">Contact</a></li>
+    {% endif %}
+    <li>
+        <div class="divider"></div>
+    </li>
+    <li><a href="/es/">es</a></li>
+    <li><a href="/en/">en</a></li>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <li>
+        <div class="divider"></div>
+    </li>
+    <br>
+    <li class="center-align media-icon">
+        <a href="https://www.facebook.com/">
+            <img src="{% static 'frontend/images/facebook.png' %}" alt="" style="width:45px">
+        </a>
+        <a href="https://www.instagram.com/dev2tech/">
+            <img src="{% static 'frontend/images/instagram.png' %}" alt="" style="width:45px">
+        </a>
+        <a href="https://www.youtube.com">
+            <img src="{% static 'frontend/images/youtube.png' %}" alt="" style="width:45px">
+        </a>
+        <a href="https://www.medium.com">
+            <img src="{% static 'frontend/images/medium.png' %}" alt="" style="width:45px">
+        </a>
+    </li>
+</ul>

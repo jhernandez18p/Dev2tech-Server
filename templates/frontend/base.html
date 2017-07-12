@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    {% include 'frontend/base/meta.html' %}
+    <title>{{pg_title}} - Dev2tech</title>
+    {% include 'frontend/base/head.html' %}
+    {% block styles %}
+    {% endblock %}
+</head>
+<body class="grey lighten-3">
+    {% block fullscreen %}
+    {% endblock %}
+    {% include 'frontend/widgets/header.html' %}
+    <section>
+        {% block section %}
+        {% endblock %}
+    </section>
+    {% include 'frontend/widgets/footer.html' %}
+    {% include 'frontend/base/js.html' %}
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

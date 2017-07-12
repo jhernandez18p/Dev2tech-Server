@@ -1,0 +1,70 @@
+<footer class="page-footer grey darken-2">
+    <div class="container">
+        <div class="row">
+            <div class="col m5 s12">
+                <h5 class="white-text dev2tech-logo heading-h3">Dev2tech</h5>
+                <ul class="grey-text text-lighten-4 collection  grey darken-2">
+                    <li class="collection-item grey darken-2">
+                        <a href="" class="grey-text text-lighten-5"> +(507) 6266-7545. <i class="material-icons left">call</i></a>
+                    </li>
+                    <li class="collection-item grey darken-2">
+                        <a href="mailto:info@dev2tech.xyz?Subject=Hello%20again" target="_blank" class="grey-text text-lighten-5"> info@dev2tech.xyz <i class="material-icons left">mail</i></a>
+                    </li>
+                    <li class="collection-item grey darken-2">
+                        <a class="grey-text text-lighten-5"> <i class="material-icons left">location_on</i>San Francisco, Ciudad de Panamá </a>
+                    </li>
+                </ul>
+            </div>
+            {% if lang == 'es' %}
+            <div class="col m3 s12">
+                <h5 class="white-text heading-h4">TECNOLOGÍAS</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Python</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">PHP</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Frontend</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Backend</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Cloud</a></li>
+                </ul>
+            </div>
+            <div class="col m4 s12">
+                <h5 class="white-text heading-h4">SERVICIOS</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Desarrollo de Aplicaciones</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Mantenimiento y Soporte</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Correo Eléctronico Corporativo</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Diseño de Interfaces y Prototipos</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Marketing Digital</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Web y Portales Empresariales</a></li>
+                </ul>
+            </div>
+            {% else %}
+            <div class="col m3 s12">
+                <h5 class="white-text heading-h4">TECHNOLOGIES</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Python</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">PHP</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Frontend</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Backend</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Cloud</a></li>
+                </ul>
+            </div>
+            <div class="col m4 s12">
+                <h5 class="white-text heading-h4">SERVICES</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Application Development</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Maintenance and Support</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Corporate Email and Mailing</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">UX DESIGN AND PROTOTYPING</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Social Networking Solutions</a></li>
+                    <li><a class="grey-text text-lighten-3 waves-effect" href="">Web and Enterprise Portals</a></li>
+                </ul>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container center-align">
+            Copyright 2016 — {% now "Y"  %} © <span class="dev2tech-logo">Dev2tech</span>. All rights reserved.
+        </div>
+    </div>
+</footer>
