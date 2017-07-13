@@ -13,6 +13,7 @@ import datetime
 import json
 import random
 
+from local_apps.frontend.helper import get_lang
 
 class Redirect(RedirectView):
     def get_redirect_url(self):
@@ -23,24 +24,8 @@ class Redirect(RedirectView):
         return reverse_lazy(url)
 
 
-def get_lang(request):
-    lang_code = 'es'
-    
-    if request.method == "POST":
-        if 'lang_code' in request.COOKIES:
-            lang_code = request.COOKIES['lang_code']
-    else:
-        lang_ = 'Spanish'
-        lang_code = 'es'
-        render = redirect('es:inicio')
-        render.set_cookie('lang_code', lang_code)
-        render.set_cookie('lang_', lang_)
-    return lang_code
-
-
 def lang(request):
     pass
-
 
 def home(request):
     context = {}
@@ -58,6 +43,8 @@ def home(request):
 
     context['lang'] = lang
     context['pg_title'] = pg_title
+    context['title'] = en_url
+    print(request.LANGUAGE_CODE)
     return render(request,template,context)
 
 
@@ -77,6 +64,7 @@ def services(request):
 
     context['lang'] = lang
     context['pg_title'] = pg_title
+    context['title'] = en_url
 
     return render(request,template,context)
 
@@ -97,6 +85,7 @@ def service_detail(request,slug=''):
 
     context['lang'] = lang
     context['pg_title'] = pg_title
+    context['title'] = "services"
 
     return render(request,template,context)
 
@@ -117,6 +106,7 @@ def contact(request):
 
     context['lang'] = lang
     context['pg_title'] = pg_title
+    context['title'] = en_url
     return render(request,template,context)
 
 
@@ -240,6 +230,7 @@ def work(request):
 
     context['lang'] = lang
     context['pg_title'] = pg_title
+    context['title'] = en_url
     return render(request,template,context)
 
 
@@ -259,4 +250,5 @@ def technology(request):
 
     context['lang'] = lang
     context['pg_title'] = pg_title
+    context['title'] = en_url
     return render(request,template,context)

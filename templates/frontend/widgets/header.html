@@ -34,13 +34,31 @@
             </ul>
             <ul class="right" id="staggered-test">
                 {% if lang == 'es' %}
-                    <li><a href="{% url 'es:servicios' %}">Servicios</a></li>
-                    <li><a href="{% url 'es:trabajos' %}">Trabajos</a></li>
-                    <li><a href="{% url 'es:contacto' %}">Contacto</a></li>
+                    {% if title != '' %}
+                        <li><a href="{% url 'es:inicio' %}">Inicio</a></li>
+                    {% endif %}
+                    {% if title != 'services' %}
+                        <li><a href="{% url 'es:servicios' %}">Servicios</a></li>
+                    {% endif %}
+                    {% if title != 'works' %}
+                        <li><a href="{% url 'es:trabajos' %}">Trabajos</a></li>
+                    {% endif %}
+                    {% if title != 'contact' %}
+                        <li><a href="{% url 'es:contacto' %}">Contacto</a></li>
+                    {% endif %}
                 {% else %}
-                    <li><a href="{% url 'en:services' %}">Services</a></li>
-                    <li><a href="{% url 'en:works' %}">Work</a></li>
-                    <li><a href="{% url 'en:contact' %}">Contact</a></li>
+                    {% if title != '' %}
+                        <li><a href="{% url 'en:home' %}">Home</a></li>
+                    {% endif %}
+                    {% if title != 'services' %}
+                        <li><a href="{% url 'en:services' %}">Services</a></li>
+                    {% endif %}
+                    {% if title != 'works' %}
+                        <li><a href="{% url 'en:works' %}">Work</a></li>
+                    {% endif %}
+                    {% if title != 'contact' %}
+                        <li><a href="{% url 'en:contact' %}">Contact</a></li>
+                    {% endif %}
                 {% endif %}
             </ul>
         </div>
@@ -60,27 +78,38 @@
     <li>
         <div class="divider"></div>
     </li>
-    {% if lang == 'es' %}
-        <li><a href="{% url 'es:servicios' %}">Servicios</a></li>
-        <li><a href="{% url 'es:trabajos' %}">Trabajos</a></li>
-        <li><a href="{% url 'es:contacto' %}">Contacto</a></li>
-    {% else %}
-        <li><a href="{% url 'en:services' %}">Services</a></li>
-        <li><a href="{% url 'en:works' %}">Work</a></li>
-        <li><a href="{% url 'en:contact' %}">Contact</a></li>
-    {% endif %}
+        {% if lang == 'es' %}
+            {% if title != '' %}
+                <li><a href="{% url 'es:inicio' %}">Inicio</a></li>
+            {% endif %}
+            {% if title != 'services' %}
+                <li><a href="{% url 'es:servicios' %}">Servicios</a></li>
+            {% endif %}
+            {% if title != 'works' %}
+                <li><a href="{% url 'es:trabajos' %}">Trabajos</a></li>
+            {% endif %}
+            {% if title != 'contact' %}
+                <li><a href="{% url 'es:contacto' %}">Contacto</a></li>
+            {% endif %}
+        {% else %}
+            {% if title != '' %}
+                <li><a href="{% url 'en:home' %}">Home</a></li>
+            {% endif %}
+            {% if title != 'services' %}
+                <li><a href="{% url 'en:services' %}">Services</a></li>
+            {% endif %}
+            {% if title != 'works' %}
+                <li><a href="{% url 'en:works' %}">Work</a></li>
+            {% endif %}
+            {% if title != 'contact' %}
+                <li><a href="{% url 'en:contact' %}">Contact</a></li>
+            {% endif %}
+        {% endif %}
     <li>
         <div class="divider"></div>
     </li>
     <li><a href="/es/">es</a></li>
     <li><a href="/en/">en</a></li>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     <br>

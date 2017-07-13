@@ -5,7 +5,13 @@
 {% endblock %}
 
 {% block section %}
-{{pg_title}}
+    <div class="row div-full valign-wrapper">
+        <div class="container">
+            <div class="">
+                {% include 'frontend/widgets/quick-contact.html' %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block js %}

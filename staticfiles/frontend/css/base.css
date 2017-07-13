@@ -2,10 +2,11 @@ body{ border: 25px solid #FFF; }
 body::-webkit-scrollbar { width: .51em; }
 body::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.3); }
 body::-webkit-scrollbar-thumb { background-color:#444;outline: 1px solid slategrey; }
-.no-margin{margin: 0 !important}
-.no-padding{padding: 0 !important}
+.no-margin{ margin: 0 !important; }
+.no-padding{ padding: 0 !important; }
 .dev2tech-logo{ font-family: 'Sarina', cursive; }
 #staggered-test li{ opacity: 0; }
+section{min-height: 70vh}
 .side-nav li > a {
     color: rgba(0,0,0,0.87);
     display: inline-block;
@@ -40,11 +41,13 @@ footer .collection{ margin: 0 !important; border: none !important; }
 footer .collection .collection-item{ padding:10px 0 !important; border: none !important; }
 .padding-5{padding: 5% 0}
 @media (max-width: 800px) {
+    body{border: 0 solid #FFF;}
     .heading-h1{ font-size: 3.5em; }
     .heading-h2{ font-size: 2.5em; }
     .heading-h3{ font-size: 1.5em; }
     .heading-h4{ font-size: .85em; }
     .div-mid-card{height: 200px}
+    section{min-height: 1vh }
 }
 @media (max-width: 800px) {
 

@@ -10,12 +10,49 @@
 {% block section %}
 <div class="row div-full-60 valign-wrapper">
     <div class="container">
-        <h2 class="center-align">
-            Thanks for writing us!
-        </h2>
-        <p class="center-align">
-            We'll contact you as soon as we can
-        </p>
+        {% if lang == 'es' %}
+            <h2 class="center-align">
+                Gracias por contactarnos
+            </h2>
+            <p class="center-align">
+                Nos pondremos en contacto, tan pronto como podamos.
+            </p>
+            <ul class="tabs center-align grey lighten-3">
+                <li class="tab cyan-text text-darken-4">
+                    <a target="_self" href="{% url 'es:inicio' %}">Inicio</a>
+                </li>
+                <li class="tab cyan-text text-darken-4">
+                    <a target="_self" href="{% url 'es:servicios' %}">Servicios</a>
+                </li>
+                <li class="tab cyan-text text-darken-4">
+                    <a target="_self" href="{% url 'es:trabajos' %}">Trabajos</a>
+                </li>
+                <li class="tab cyan-text text-darken-4">
+                    <a target="_self" href="{% url 'es:contacto' %}">Contacto</a>
+                </li>
+            </ul>
+        {% else %}
+            <h2 class="center-align">
+                Thanks for writing us!
+            </h2>
+            <p class="center-align">
+                We'll contact you as soon as we can
+            </p>
+            <ul class="tabs center-align grey lighten-3">
+                <li class="tab cyan-text text-darken-4">
+                    <a target="_self" href="{% url 'en:home' %}">Home</a>
+                </li>
+                <li class="tab cyan-text text-darken-4">
+                    <a target="_self" href="{% url 'en:services' %}">Services</a>
+                </li>
+                <li class="tab cyan-text text-darken-4">
+                    <a target="_self" href="{% url 'en:works' %}">Work</a>
+                </li>
+                <li class="tab cyan-text text-darken-4">
+                    <a target="_self" href="{% url 'en:contact' %}">Contact</a>
+                </li>
+            </ul>
+        {% endif %}
     </div>
 </div>
 {% endblock %}

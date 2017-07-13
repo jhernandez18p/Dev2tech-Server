@@ -13,6 +13,7 @@ def menu(request):
 def sessions(request):
     """# Cookies prepeocessor """
     context = {}
+
     # site_description = 'Asesalud Laboral 2727 C.A'
     # context['site_description'] = site_description
     return context
