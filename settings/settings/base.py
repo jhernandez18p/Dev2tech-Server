@@ -8,7 +8,7 @@ if str(config('DEBUG')) == 'True':
     ALLOWED_HOSTS = ['*']
 else:
     DEBUG = False
-    ALLOWED_HOSTS = ['www.dev2tech.xyz','dev2tech.xyz','174.138.116.15']
+    ALLOWED_HOSTS = ['*.dev2tech.xyz','dev2tech.xyz','174.138.116.15']
 
 SECRET_KEY = config('SECRET_KEY')
 ROOT_URLCONF = 'settings.urls'
