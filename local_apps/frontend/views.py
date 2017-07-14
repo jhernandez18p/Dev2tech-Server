@@ -25,7 +25,31 @@ class Redirect(RedirectView):
 
 
 def lang(request):
-    pass
+    if request.method == "POST":
+        if 'url' in request.POST and 'lang_code' in request.POST:
+            url = request.POST['url']
+            lang_code = request.POST['lang_code']
+            lang_ = False
+        else:
+            url = 'es:inicio'
+            lang_code = 'English'
+            lang_ = True
+
+        if 'blog' in request.POST:
+            blog = request.POST['blog']
+            if blog != '':
+                url = blog
+
+        print(url)
+        render = redirect(url)
+        render.set_cookie('lang_code', lang_code)
+        render.set_cookie('lang', lang_)
+        print(render)
+        return render
+    
+    else:    
+        print('La url del post es %s' % url)
+        return redirect('es:inicio')
 
 def home(request):
     context = {}
